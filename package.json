@@ -1,0 +1,12 @@
+{
+  "name": "khutut-ahmed-alnahr",
+  "version": "1.0.0",
+  "description": "خطوط أحمد النهر — عرض خصائص الخطوط ومجموعات الأساليب وتعديلها وتنزيل الخط بعد دمج الميزات (OpenType feature baking in the browser)",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "build": "node scripts/build.js",
+    "test": "echo \"usage: node tests/bake-test.js <font> <on-features> <off-features> <out>\""
+  }
+}

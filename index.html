@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>خطوط أحمد النهر</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#" aria-label="خطوط أحمد النهر">
+    <svg class="mark" viewBox="0 0 48 48" aria-hidden="true"><rect x="9" y="9" width="30" height="30"/><rect x="9" y="9" width="30" height="30" transform="rotate(45 24 24)"/><path d="M7 24c3-5 6-5 8.5 0s5.500 5 8.500 0 5.500-5 8.500 0 5.500 5 8.500 0"/></svg>
+    <span>خطوط أحمد <span class="n">النهر</span></span>
+  </a>
+  <span class="sp"></span>
+  <span class="privacy">تُعالَج الملفات داخل متصفحك فقط</span>
+</header>
+
+<section class="hero" id="hero">
+  <h1 class="wordmark"><span class="w1">خطوط أحمد</span> <span class="w2">النهر</span></h1>
+  <svg class="river" viewBox="0 0 1200 90" preserveAspectRatio="none" aria-hidden="true">
+    <defs><linearGradient id="rg" x1="1" x2="0" y1="0" y2="0"><stop offset="0" style="stop-color:var(--gold)"/><stop offset=".45" style="stop-color:var(--river)"/><stop offset="1" style="stop-color:var(--river2)"/></linearGradient></defs>
+    <path class="r3" d="M0 50 C120 14 240 86 360 50 S600 14 720 50 S960 86 1080 50 S1160 32 1200 46"/>
+    <path class="r2" d="M0 44 C110 6 250 82 380 44 S620 6 740 44 S980 82 1100 44 S1170 26 1200 40"/>
+    <path class="r1" d="M0 38 C130 -2 260 78 400 38 S640 -2 760 38 S1000 78 1120 38 S1180 20 1200 34"/>
+  </svg>
+  <p class="lede">افتح ملف الخط، وتصفّح خصائصه ومجموعات أساليبه، وفعّل ما يعجبك، ثم نزّل نسخة جديدة تحمل التفعيل داخلها.</p>
+  <label class="drop" id="drop" for="file" tabindex="0">
+    <strong>اسحب ملف الخط إلى هنا</strong>
+    <small>TTF · OTF · WOFF</small>
+    <span class="btn primary">اختيار ملف من جهازك</span>
+  </label>
+  <input type="file" id="file" accept=".ttf,.otf,.woff,font/ttf,font/otf,font/woff" hidden>
+  <div class="errbox" id="err" role="alert" hidden></div>
+  <ol class="steps">
+    <li><b>ارفع الخط</b>نقرأ جداول الخط ونعرض خصائصه كاملة.</li>
+    <li><b>فعّل وعدّل</b>جرّب كل ميزة على نصك مباشرة، وعدّل أسماء المجموعات وبيانات الخط.</li>
+    <li><b>نزّل النسخة</b>تُدمج الميزات المفعّلة في الملف فتعمل دون إعدادات.</li>
+  </ol>
+</section>
+
+<main class="ws" id="ws" hidden>
+  <div class="fontbar">
+    <h2 class="fname" id="fname"></h2>
+    <div class="meta" id="fmeta"></div>
+    <span class="sp"></span>
+    <button class="btn small" id="change">فتح خط آخر</button>
+  </div>
+  <div class="grid">
+    <section class="stage-card" aria-label="المعاينة">
+      <div class="tools">
+        <label>الحجم <input type="range" id="size" min="20" max="240" value="72"><output id="sizeOut">٧٢</output></label>
+        <div class="seg" role="group" aria-label="اتجاه النص">
+          <button data-dir="auto" aria-pressed="true">تلقائي</button>
+          <button data-dir="rtl" aria-pressed="false">يمين ← يسار</button>
+          <button data-dir="ltr" aria-pressed="false">يسار ← يمين</button>
+        </div>
+        <label>اللغة
+          <select id="lang">
+            <option value="ar">العربية</option><option value="fa">الفارسية</option><option value="ur">الأردية</option>
+            <option value="ckb">الكردية (سوراني)</option><option value="en">الإنجليزية</option><option value="fr">الفرنسية</option>
+          </select>
+        </label>
+        <label>نص جاهز
+          <select id="sample"></select>
+        </label>
+      </div>
+      <div class="stage" id="stage" dir="auto" spellcheck="false" role="textbox" aria-multiline="true" aria-label="نص المعاينة، اكتب هنا"></div>
+      <div class="axes" id="axes" hidden></div>
+      <div class="chips" id="chips"></div>
+    </section>
+    <section class="panel">
+      <div class="tabs" role="tablist" id="tabs"></div>
+      <div class="pane" id="pane" role="tabpanel"></div>
+    </section>
+  </div>
+</main>
+
+<div class="dock" id="dock" hidden><div class="in"><span id="dockInfo"></span><button class="btn primary" id="dockDl">تنزيل الخط</button></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/font-core.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
