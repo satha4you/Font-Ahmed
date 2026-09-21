@@ -4,7 +4,7 @@
   --accent:#1F3A93; --accent-ink:#FFFFFF; --accent-soft:#E2E8FB;
   --river:#0E8A8C; --river2:#1F3A93; --gold:#A9781A; --gold-soft:#F5E9C8; --ok:#14705B; --warn:#8F5200; --warn-soft:#FFF0D0; --danger:#B3261E; --danger-soft:#FDE7E5;
   --ui:'IBM Plex Sans Arabic','Segoe UI',Tahoma,'Noto Sans Arabic',system-ui,sans-serif;
-  --display:'Amiri','Noto Naskh Arabic','Traditional Arabic',serif;
+  --display:'IBM Plex Sans Arabic','Amiri','Noto Naskh Arabic','Traditional Arabic',serif;
   --uf:'IBM Plex Sans Arabic',sans-serif;
   --pattern:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64' fill='none' stroke='%23B8862B' stroke-width='1'%3E%3Crect x='15' y='15' width='34' height='34'/%3E%3Crect x='15' y='15' width='34' height='34' transform='rotate(45 32 32)'/%3E%3Cpath d='M0 32h8M56 32h8M32 0v8M32 56v8'/%3E%3C/svg%3E");
   box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
